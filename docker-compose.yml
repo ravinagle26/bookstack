@@ -8,14 +8,14 @@ services:
     - DB_USERNAME=bookstackusr
     - DB_PASSWORD=bookstackpass
     #set the APP_ to the URL of bookstack without without a trailing slash APP_URL=https://example.com
-    - APP_URL=https://books.myoperator.dev
+    - APP_URL=http://dev-bookstack.myoperator.dev
     - APP_ENV=development
     - GOOGLE_AUTO_REGISTER=true
     - GOOGLE_APP_ID=1067017166742-0ddf80gvahissspm4p62tenk4uelenfl.apps.googleusercontent.com
     - GOOGLE_APP_SECRET=PlKPzhAZNkvhBP43ckfX0_xH
-    volumes:
-    - ./data/public/uploads:/var/www/bookstack/public/uploads
-    - ./data/storage/uploads:/var/www/bookstack/storage/uploads
+    #volumes:
+    #- ./data/public/uploads:/var/www/bookstack/public/uploads
+    #- ./data/storage/uploads:/var/www/bookstack/storage/uploads
     ports:
-    - "8003:8080"
+    - "8080:8080"
 
